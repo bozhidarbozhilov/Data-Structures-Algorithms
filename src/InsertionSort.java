@@ -3,21 +3,12 @@ public class InsertionSort {
         int newElement;
         for (int firstUnsortedIndex = 1; firstUnsortedIndex < array.length; firstUnsortedIndex++) {
             newElement = array[firstUnsortedIndex];
-            int index = firstUnsortedIndex - 1;
-            while(index >= 0){
-                if(array[index] > newElement){
-                    array[index+1] = array[index];
-                    if(index==0){
-                        array[0] = newElement;
-                        break;
-                    }
-                    index--;
-                }else{
-                    array[index+1] = newElement;
-                    break;
-                }
+            int index = firstUnsortedIndex;
+            while(index > 0 && array[index-1]>newElement){
+                array[index] = array[index-1];
+                index--;
             }
-
+            array[index] = newElement;
 
         }
         return array;
