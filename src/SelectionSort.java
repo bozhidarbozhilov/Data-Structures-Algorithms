@@ -1,20 +1,19 @@
 public class SelectionSort {
     public static int[] sort(int[] array){
-        int[] result = array;
-        for (int lastUnsortedIndex = result.length-1 ; lastUnsortedIndex > 0 ; lastUnsortedIndex--) {
+        for (int lastUnsortedIndex = array.length-1; lastUnsortedIndex > 0 ; lastUnsortedIndex--) {
             int largestIndex = 0;
             for (int i = 1; i <= lastUnsortedIndex; i++) {
-                if(result[i] > result[largestIndex]){
+                if(array[i] > array[largestIndex]){
                     largestIndex = i;
                 }
             }
-            swap(result, lastUnsortedIndex, largestIndex);
+            swap(array, lastUnsortedIndex, largestIndex);
 //            int temp = result[lastUnsortedIndex];
 //            result[lastUnsortedIndex] = result[largestIndex];
 //            result[largestIndex] = temp;
 
         }
-        return result;
+        return array;
     }
 
     private static void swap(int[] arr, int i, int j){

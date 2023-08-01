@@ -8,17 +8,16 @@ public class BubbleSort {
      * @return sorted integer array increasing or decreasing order
      */
     public static int[] sort(String order, int[] array){
-        int[] result = array;
 
         for (int lastUnsortedIndex = array.length - 1; lastUnsortedIndex > 0; lastUnsortedIndex--) {
             for (int i = 0; i < lastUnsortedIndex; i++) {
                 if(order.equals("incr")){
-                    if(result[i] > result[i+1]){
-                        swap(result, i, i+1);
+                    if(array[i] > array[i+1]){
+                        swap(array, i, i+1);
                     }
                 }else if(order.equals("decr")){
-                    if(result[i] < result[i+1]){
-                        swap(result, i, i+1);
+                    if(array[i] < array[i+1]){
+                        swap(array, i, i+1);
                     }
                 }
 
@@ -27,7 +26,7 @@ public class BubbleSort {
             
         }
         
-        return result;
+        return array;
     }
     
     private static void swap(int[] arr, int i, int j){
