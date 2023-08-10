@@ -12,7 +12,6 @@ public class MergeSort {
         }
 
         int mid = (start + end)/2;
-
         mergeSort(input, start, mid);
         mergeSort(input, mid, end);
         merge(input, start, mid, end);
