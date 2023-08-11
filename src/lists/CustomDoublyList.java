@@ -17,6 +17,20 @@ public class CustomDoublyList<T> {
         size++;
     }
 
+    public T removeFromFront(){
+        DoubleNode<T> nodeToRemove = head;
+
+        if(size == 1){
+            head = null;
+            tail = null;
+        }else{
+            head.getNext().setPrev(null);
+            head = head.getNext();
+        }
+        size--;
+        return nodeToRemove.getValue();
+    }
+
     public void printFromStart(){
         DoubleNode<T> current = head;
 

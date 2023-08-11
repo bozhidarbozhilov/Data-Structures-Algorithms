@@ -10,18 +10,18 @@ public class ListsTest {
         CustomDoublyList<Employee> employees = new CustomDoublyList<>();
 
         employees.addToFront(employee1);
+        employees.addToFront(employee2);
 
         employees.printFromStart();
-        System.out.println(employees.getHead().getNext());
-        System.out.println(employees.getHead().getPrev());
-        employees.printFromEnd();
+
         System.out.println(employees.getSize());
 
-        employees.addToFront(employee2);
+        employees.removeFromFront();
+
         employees.printFromStart();
-        System.out.println(employees.getHead().getNext());
-        System.out.println(employees.getHead().getPrev());
-        employees.printFromEnd();
+//        System.out.println(employees.getHead().getNext());
+//        System.out.println(employees.getHead().getPrev());
+
         System.out.println(employees.getSize());
 
     }
