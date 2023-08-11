@@ -1,3 +1,4 @@
+package sorting;
 
 public class CountingSort {
     public static int[] sort(int[] array){

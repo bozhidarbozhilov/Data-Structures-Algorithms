@@ -1,4 +1,4 @@
-package sortchallenge3;
+package sorting.sortchallenge3;
 
 public class StringRadixSort {
 

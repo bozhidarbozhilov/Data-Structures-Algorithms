@@ -1,3 +1,4 @@
+package sorting;
 
 public class RadixSort {
     public static int[] sort(int[] array){

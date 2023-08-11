@@ -1,3 +1,5 @@
+package sorting;
+
 public class SelectionSort {
     public static int[] sort(int[] array){
         for (int lastUnsortedIndex = array.length-1; lastUnsortedIndex > 0 ; lastUnsortedIndex--) {

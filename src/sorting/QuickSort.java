@@ -1,3 +1,5 @@
+package sorting;
+
 public class QuickSort {
     public static int[] sort(int[] array){
         quickSort(array, 0, array.length);

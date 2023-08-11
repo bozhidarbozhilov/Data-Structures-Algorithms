@@ -1,3 +1,5 @@
+package sorting;
+
 public class BubbleSort {
     /**
      * Returns sorted integer array depending on the passed order:
