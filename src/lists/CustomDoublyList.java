@@ -1,5 +1,7 @@
 package lists;
 
+import java.time.Duration;
+
 public class CustomDoublyList<T> {
     private DoubleNode<T> head;
     private DoubleNode<T> tail;
@@ -29,6 +31,31 @@ public class CustomDoublyList<T> {
         }
         size--;
         return nodeToRemove.getValue();
+    }
+
+    public void addToEnd(T newElement){
+        DoubleNode<T> newNode = new DoubleNode<>(newElement);
+        if(tail == null){
+            head = newNode;
+        }else{
+            tail.setNext(newNode);
+            newNode.setPrev(tail);
+        }
+        tail = newNode;
+        size++;
+    }
+
+    public T removeFromEnd(){
+        DoubleNode<T> removedNode = tail;
+        if(size == 1){
+            tail = null;
+            head = null;
+        }else{
+            tail.getPrev().setNext(null);
+            tail = tail.getPrev();
+        }
+        size--;
+        return removedNode.getValue();
     }
 
     public void printFromStart(){

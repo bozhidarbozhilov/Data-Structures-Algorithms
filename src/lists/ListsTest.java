@@ -9,14 +9,15 @@ public class ListsTest {
 
         CustomDoublyList<Employee> employees = new CustomDoublyList<>();
 
-        employees.addToFront(employee1);
-        employees.addToFront(employee2);
+        employees.addToEnd(employee1);
+        employees.addToEnd(employee2);
+        employees.addToEnd(employee3);
 
         employees.printFromStart();
 
         System.out.println(employees.getSize());
 
-        employees.removeFromFront();
+        employees.removeFromEnd();
 
         employees.printFromStart();
 //        System.out.println(employees.getHead().getNext());
