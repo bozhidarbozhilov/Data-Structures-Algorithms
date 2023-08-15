@@ -8,7 +8,7 @@ public class Main {
         //array for radix sort all numbers must be the same type and radix
         int[] intArray = { 4725, 4586, 1330, 8792, 1594, 5729 };
 
-        int[] sorted = RadixSort.sort(intArray);
+        int[] sorted = BucketSort.sort(intArray);
 
         for(int element: sorted){
             System.out.println(element);
